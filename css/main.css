@@ -3426,14 +3426,13 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
-  overflow: hidden;
   transition: 0.5s ease;
 }
 
 .single-item__cover img {
   width: 48px;
   height: auto;
+  border-radius: 8px;
   opacity: 1;
   transition: opacity 0.5s ease;
   position: relative;

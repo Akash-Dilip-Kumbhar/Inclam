@@ -19,10 +19,42 @@
     <link rel="stylesheet" href="css/slider-radio.css">
     <link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://vjs.zencdn.net/8.12.0/video-js.css" rel="stylesheet" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="icon/Inclam.png" sizes="64x64">
     <link rel="apple-touch-icon" href="icon/Inclam.png">
+    <style>
+        .live__title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .live__title a {
+            color: #fff;
+        }
+
+        .videobx video {
+            width: 100%;
+        }
+
+        .vjs-poster {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .vjs-poster img {
+            height: 125%;
+        }
+
+        .my-video-dimensions {
+            width: 100%;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -223,9 +255,9 @@
     <main class="main">
         <div class="container-fluid">
             <!-- artists -->
-            <div class="row row--grid">
+            <div class="row">
                 <!-- breadcrumb -->
-                <div class="col-12">
+                <div class="col-12 mb-3">
                     <ul class="breadcrumb">
                         <li class="breadcrumb__item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb__item breadcrumb__item--active">Testimonials</li>
@@ -235,54 +267,46 @@
             <!-- end breadcrumb -->
 
             <!-- Testimonials -->
-            <section class="row row--grid">
+            <div class="container-fluid">
                 <!-- title -->
-                <div class="col-12">
-                    <div class="main__title .main__carousel--artists">
-                        <h1>Testimonials</h1>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <div class="main__title .main__carousel--artists mb-3">
+                            <h1>Testimonials</h1>
+                        </div>
                     </div>
-                </div>
-                <!-- end title -->
-
-                <div class="col-12">
-                    <div class="main__carousel-wrap">
-                        <div class="main__carousel main__carousel--podcasts owl-carousel" id="podcasts">
-                            <div class="live">
-                                <span class="live__status">New</span>
-                                <video controls poster="Videos/Mahesh Kale.jpg" controls controlsList="nodownload"
-                                    class="live__cover open-video">
-                                    <source src="Videos/Mahesh Kale.mp4" type="video/mp4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path
-                                            d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
-                                        </path>
-                                    </svg>
-                                </video>
+                    <!-- end title -->
+                    <div class="col-12">
+                        <div class="row" style="justify-content: center;">
+                            <div class="col-lg-4 col-md-4 col-10">
+                                <div class="videobx" style="width: 100%;">
+                                    <video id="my-video" class="video-js" controls preload="auto"
+                                        poster="Videos/Mahesh Kale.jpg" data-setup="{}">
+                                        <source src="Videos/Mahesh Kale.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
                                 <h3 class="live__title">
                                     <a href="Artist_MaheshKale.html" class="open-video">Mahesh
                                         Kale</a>
                                 </h3>
                             </div>
-
-                            <div class="live">
-                                <span class="live__status">New</span>
-                                <video controls poster="Videos/Mrunmayee Phatak.jpg" controls controlsList="nodownload"
-                                    class="live__cover open-video">
-                                    <source src="Videos/Mrunmayee Phatak.mp4" type="video/mp4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path
-                                            d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z">
-                                        </path>
-                                    </svg>
-                                </video>
-                                <h3 class="live__title"><a href="Artist_MaheshKale.html" class="open-video"> Mrunmayee
+                            <div class="col-lg-4 col-md-4 col-10">
+                                <div class="videobx" style="width: 100%;">
+                                    <video id="my-video" class="video-js" controls preload="auto"
+                                        poster="Videos/Mrunmayee Phatak.jpg" data-setup="{}">
+                                        <source src="Videos/Mrunmayee Phatak.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+                                <h3 class="live__title"><a href="Artist_MrunmayeePhatak.html" class="open-video">
+                                        Mrunmayee
                                         Phatak
-                                    </a></h3>
+                                    </a>
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- end podcasts -->
             <!-- end artists -->
         </div>
@@ -308,6 +332,7 @@
     <script src="js/jquery.inputmask.min.js"></script>
     <script src="js/plyr.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://vjs.zencdn.net/8.12.0/video.min.js"></script>
 </body>
 
 </html>
